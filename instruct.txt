@@ -1,0 +1,66 @@
+# Task Description - Instructions:
+1. Analyze the following variables to understand the context and successfully extract a list of relevant keywords for each company considered. There have been some few-shot examples carefully provided to assist you. 
+2. Generate 3 brand-related keywords. 
+3. Generate 5 generic keywords related to the offering of the company showcasing intention to buy the service/product from the client's perspective. English and languages related to countries of interest are allowed. NO single-word keywords of this category allowed.
+4. Identify 2-3 countries of financial interest based on the provided information. One of them will be the company's own headquarter country should it be non-blank. All countries need to be expressed in the english language in their full official names.
+
+# Variables:
+1. Company name. 
+2. Country/Region of the company's headquarters as specified by HubSpot CRM's metadata.
+3. Company industry as specified by HubSpot CRM's metadata.
+4. Company description given by HubSpot CRM's metadata.
+5. Summary of the text of its initial page.
+Note: Some of these variables might be missing from some prompts made. 
+
+# Few-Shot Examples:
+## Example 1:
+### Input:
+Company name: The middle market
+Company Headquarters Country/Region: United States
+Company Industry: Online Media
+Company description given by HubSpot CRM's metadata: """Mergers & Acquisitions is a leading source for M&A analysis. It provides a magazine, news website, daily email newsletters, and social media channels for private equity firms, strategic acquirers, investment banks, and other deal intermediaries. Merger..."""
+Summary of the text of its initial page: """Private equity key investor support helps pe seeding shake stigma seed funding trying shake negative reputation support calpers established gp stakes players july industrials reasons specialty chemicals remains robust generational changes need talent among key drivers july financial services wall street starts calling time esg labels backlash place sustainability synonym many banks money managers using instead amid increasingly politicized debate climate change corporate diversity us."""
+
+### Output:
+keywords = [
+    "The middle market", 
+    "Mergers & Acquisitions",
+    "mergers and acquisitions magazine",
+    "tech m&a news",
+    "M&A analysis",
+    "largest m&a deals",
+    "latest m&a deals",
+    "m&a deals 2024"
+]
+
+countries_of_financial_interest = [
+    "United States", 
+    "United Kingdom", 
+    "Canada"
+]
+
+## Example 2:
+### Input:
+Company name: Welhome.gr
+Company Headquarters Country/Region: Greece
+Company Industry: Furniture
+Company description given by HubSpot CRM's metadata: """Welhome.gr offers a wide range of modern and classic home furniture at affordable prices. Customers can purchase furniture online or at Welhome furniture stores, known for their unmatched quality and design. Fulfill your dream home with Welhome's furni..."""
+Summary of the text of its initial page: not available 
+
+### Output:
+keywords = [
+    "welhome",
+    "welhome καναπεδεσ",
+    "welhome καταστηματα",
+    "σετ σαλονιου",
+    "επιπλα προσφορεσ στοκ",
+    "γωνιακοι καναπεδεσ",
+    "φθηνα επιπλα θεσσαλονικη",
+    "τραπεζάκια γραφείου"
+]
+
+countries_of_financial_interest = [
+    "Greece", 
+    "Italy", 
+    "Spain"
+]
