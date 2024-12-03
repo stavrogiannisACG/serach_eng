@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: chroma
+    ports:
+      - "8000:8000"  # Chroma runs on port 8000
+    volumes:
+      - ./chroma_db:/chroma_db  # Persistent storage for Chroma
+
+  flask_app:
+    build: .
+    container_name: flask_app
+    ports:
+      - "5001:5001"
+    depends_on:
+      - chroma
+    environment:
+      CHROMA_SERVER_URL: "http://chroma:8000"
+    volumes:
+      - .:/app
