@@ -1,38 +1,87 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin:0px 5px 0px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: whitesmoke;
+}
+.caption{
+  min-height: 40px;
+  background-color: green;
+  font-size: 40px;
   color: white;
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
+  padding:5px 5px 5px 5px
+}
+textarea{
+  margin: 10px;
+  padding:10px;
+}
+button{
+  width: 10rem;
+  height: 2rem;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: white;
+  background: green;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.results_answers{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin-top:20px;
+  margin-left:5%;
+  /* background-color: aqua; */
+}
+.response{
+  flex:1;
+  text-align: center;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.response_title, .response2_title{
+  font-size: 30px;
+  color: gray;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+}
+.response2{
+  flex:1;
+  text-align: center;
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.markdown{
+  border: 1px rgba(74, 74, 74, 0.4) solid;
+  height: 370px;
+  width:90%;
+  border-radius:5px;
+  padding: 10px;
+  text-align: start;
+  box-shadow: 2px 2px 2px 1px rgba(74, 74, 74, 0.314);
+  overflow-y: scroll;
+  background-color: white;
+}
+.docs{
+  height: 370px;
+  width:90%;
+  padding: 10px;
+  border: 1px rgba(74, 74, 74, 0.4) solid;
+  border-radius:5px;
+  box-shadow: 2px 2px 2px 1px rgba(74, 74, 74, 0.314);
+  overflow-y: scroll;
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
